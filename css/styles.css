@@ -2,19 +2,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 body {
     font-family: 'Karla', sans-serif;
-    width: 100%;
     height: 100vh;
     background-color: hsl(204, 43%, 93%);
-    
-}
-
-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,15 +20,24 @@ section {
     width: 80%;
 }
 
+/* How to do border-radius better? I attemped to put border-radius on section, when it didn't work I changed it to a div, and it still didn't work. I wonder if it's to do with hierarchy? */
+.join {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.why-us {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .join,
 .subscription,
 .why-us {
     padding: 1.5em;
 }
 
-h1 {
-    font-size: 1.4rem;
-}
 h2 {
     font-size: 1.1rem;
     line-height: 1.3em;
@@ -42,12 +46,14 @@ h2 {
 p {
     font-size: 0.75rem;
     line-height: 2em;
+    opacity: 0.9;
 }
 
 /* Join Our Community */
 
 h1 {
     color: hsl(179, 62%, 43%);
+    font-size: 1.4rem;
 }
 
 .join h2 {
@@ -68,15 +74,27 @@ h1 {
 
 .subscription {
     background-color: hsl(179, 62%, 43%);
+    ;
 }
 
 .subscription h2, p {
     color: #fff;
     padding: 0.5rem 0;
+    opacity: 0.9;
 }
 
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Had an issue with getting the alignment correct for the $29 & per month. It seemed that the span was using the left space, so the flex-start would not work. Adding marging-left: 0; has cleaered the issue, but I wonder if there is a better way?*/
 .subscription span {
     font-size: 2rem;
+    margin-right: 1rem;
+    margin-left: 0;
 } 
 
 .btn {
@@ -99,6 +117,7 @@ h1 {
 
 .why-us h2, li {
     color: #fff;
+    opacity: 0.9;
 }
 
 ul {
@@ -113,9 +132,15 @@ ul {
 
 /* Footer */ 
 
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: rgb(94, 92, 92);
+    text-decoration: none;
 }
