@@ -23,7 +23,6 @@ section {
 
 .container {
     width: 80%;
-    border: solid 1px red;  
 }
 
 .join,
@@ -33,14 +32,16 @@ section {
 }
 
 h1 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.3em;
 }
 
 p {
     font-size: 0.75rem;
+    line-height: 2em;
 }
 
 /* Join Our Community */
@@ -51,11 +52,12 @@ h1 {
 
 .join h2 {
     color: hsl(71, 73%, 54%);
+    padding: 1.1rem 0;
 }
 
 .join p {
     color: hsl(218, 22%, 67%);
-    line-height: 1.5em;
+    line-height: 1.9em;
 }
 
 .join {
@@ -70,6 +72,24 @@ h1 {
 
 .subscription h2, p {
     color: #fff;
+    padding: 0.5rem 0;
+}
+
+.subscription span {
+    font-size: 2rem;
+} 
+
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    border-radius: 4px;
+    background-color: hsl(71, 73%, 54%);
+    padding: 0.8em 0;
+    margin-top: 1rem;
+    box-shadow: 0.2rem 0.1rem 10px hsl(178, 62%, 31%);
 }
 
 /* Why Us */
@@ -81,9 +101,11 @@ h1 {
     color: #fff;
 }
 
-li {
+ul {
     list-style: none;
     font-size: 0.75rem;
+    line-height: 1.5em;
+    margin-top: 1rem;
 }
 
 
