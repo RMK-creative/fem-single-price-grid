@@ -18,6 +18,7 @@ body {
 
 .container {
     width: 80%;
+    max-width: 40rem;
 }
 
 /* How to do border-radius better? I attemped to put border-radius on section, when it didn't work I changed it to a div, and it still didn't work. I wonder if it's to do with hierarchy? */
@@ -127,7 +128,32 @@ ul {
     margin-top: 1rem;
 }
 
+@media only screen and (min-width: 62.5em){
 
+    .container {
+    /*display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: repeat (2, auto);*/
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 70%;
+    }
+
+    .subscription {
+        flex-grow: 1;
+        max-width: 50%;
+        border-bottom-left-radius: 10px;
+    }
+
+    .why-us {
+        flex-grow: 1;
+        max-width: 50%;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+
+}
 
 
 /* Footer */ 
