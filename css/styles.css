@@ -111,6 +111,10 @@ h1 {
     box-shadow: 0.2rem 0.1rem 10px hsl(178, 62%, 31%);
 }
 
+.btn:hover {
+    background-color: hsl(71, 70%, 61%);
+}
+
 /* Why Us */
 .why-us {
     background-color: hsl(179, 62%, 48%);
