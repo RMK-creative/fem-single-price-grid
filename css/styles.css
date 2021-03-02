@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -16,25 +16,28 @@ body {
     flex-direction: column;
 }
 
-section {
+.container {
     width: 80%;
     max-width: 40rem;
     display: grid;
-    grid-template-columns: 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "join"  "subscription why-us";
+    grid-template-columns: 300px;
+    grid-template-rows: auto;
+    grid-template-areas: "join"  
+    "subscription" "why-us";
+    }
 }
 
 /* How to do border-radius better? I attemped to put border-radius on section, when it didn't work I changed it to a div, and it still didn't work. I wonder if it's to do with hierarchy? */
 .join {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+    grid-area: join;
 }
 
 .why-us {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    grid-area: why-us;
 }
 
 .join,
@@ -79,6 +82,7 @@ h1 {
 
 .subscription {
     background-color: hsl(179, 62%, 43%);
+    grid-area: subscription;
     ;
 }
 
@@ -136,7 +140,7 @@ ul {
     margin-top: 1rem;
 }
 
-@media only screen and (max-width: 62.5em){
+/*  @media only screen and (max-width: 62.5em){
 
     .container {
     display: grid;
@@ -145,12 +149,12 @@ ul {
     max-width: 70%;
     }
 
-}
+} */
 
 
 /* Footer */ 
 
-footer {
+/*footer {
     position: absolute;
     bottom: 0;
 }
@@ -161,4 +165,4 @@ footer {
 .attribution a { 
     color: rgb(94, 92, 92);
     text-decoration: none;
-}
+}  */
