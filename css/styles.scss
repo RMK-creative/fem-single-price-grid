@@ -1,10 +1,9 @@
-:root {
-    --color-bright-yellow: hsl(71, 73%, 54%);
-    --color-cyan: hsl(179, 62%, 43%);
-    --color-cyan-light: hsl(179, 62%, 48%);
-    --color-grayish-blue: hsl(218, 22%, 67%);
-    --color-light-gray: hsl(204, 43%, 93%);
-}
+$color-bright-yellow: hsl(71, 73%, 54%);
+$color-cyan: hsl(179, 62%, 43%);
+$color-cyan-light: hsl(179, 62%, 48%);
+$color-grayish-blue: hsl(218, 22%, 67%);
+$color-light-gray: hsl(204, 43%, 93%);
+$color-white: hsl(0, 0%, 100%);
 
 * {
     box-sizing: border-box;
@@ -12,12 +11,58 @@
     padding: 0;
 }
   
-  html {
-      font-family: 'Karla', sans-serif;
-      font-size: 16px;
+html {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
   
-  body {
-      min-height: 100vh;
-      min-width: 100vw;
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $color-light-gray;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+}
+
+
+
+/*** TEXT STYLING ***/
+h1 {
+    font-size: 1.25rem;
+    color: $color-cyan;
+}
+
+h2 {
+    font-size: 1.125rem;
+    color: $color-white;
+}
+
+.join__guarantee {
+    font-size: 0.9rem;
+    color: $color-bright-yellow;
+}
+
+p {
+    color: $color-white;
+}
+
+li {    
+    font-size: 0.875rem;
+    color: $color-white;
+}
+
+.subscription__price-total {
+    font-size: 2rem;
+}
+
+.subscription__price-freq {
+    font-size: 1.125rem;
 }
