@@ -1,6 +1,6 @@
 $color-bright-yellow: hsl(71, 73%, 54%);
 $color-cyan: hsl(179, 62%, 43%);
-$color-cyan-light: hsl(179, 62%, 48%);
+$color-cyan-light: hsl(179, 66%, 46%);
 $color-grayish-blue: hsl(218, 22%, 67%);
 $color-light-gray: hsl(204, 43%, 93%);
 $color-white: hsl(0, 0%, 100%);
@@ -14,7 +14,7 @@ $color-white: hsl(0, 0%, 100%);
 html {
     font-family: 'Karla', sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    /*line-height: 1.6;*/
 }
   
 body {
@@ -23,13 +23,74 @@ body {
     background-color: $color-light-gray;
 }
 
-ul {
+ul,
+a {
     list-style: none;
+    text-decoration: none;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
 }
 
 .container {
-    min-height: 100vh;
-    display: grid;
+    max-width: 25rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.box {
+    padding: 1.8rem 1.4rem;
+}
+
+.join {
+    background-color: $color-white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    grid-area: join;
+}
+
+.subscription {
+    background-color: $color-cyan;
+    grid-area: subscription;
+}
+
+.subscription__price {
+    margin-bottom: 0.5rem;
+}
+
+.subscription__price-total {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.subscription__price-freq {
+    font-size: 1.125rem;
+    opacity: 0.6;
+    margin-left: 0.7em;
+    position: relative;
+    bottom: 0.3rem;
+}
+
+.subscription__btn {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-bright-yellow;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0.2rem 0.3rem 10px hsl(178, 62%, 33%)
+}
+
+.why {
+    background-color: $color-cyan-light;
+    grid-area: why;
 }
 
 
@@ -38,16 +99,26 @@ ul {
 h1 {
     font-size: 1.25rem;
     color: $color-cyan;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
     font-size: 1.125rem;
     color: $color-white;
+    margin-bottom: 1.5rem;
 }
 
 .join__guarantee {
     font-size: 0.9rem;
     color: $color-bright-yellow;
+    margin-bottom: 0.8rem;
+}
+
+.join__text {
+    color: $color-grayish-blue;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
 }
 
 p {
@@ -57,12 +128,12 @@ p {
 li {    
     font-size: 0.875rem;
     color: $color-white;
+    line-height: 1.4;
+    opacity: 0.7;
 }
 
-.subscription__price-total {
-    font-size: 2rem;
-}
-
-.subscription__price-freq {
-    font-size: 1.125rem;
+.attribution,
+.attribution a {
+    text-align: center;
+    color: $color-grayish-blue;
 }
