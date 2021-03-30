@@ -38,25 +38,25 @@ a {
 .container {
     max-width: 19.5rem;
     margin: 3rem 1rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
     box-shadow: 0.2rem 0.3rem 20px hsl(198, 12%, 79%);
 }
 
-.box {
+.subscription, 
+.why {
     padding: 1.4rem;
 }
 
 .join {
     background-color: $color-white;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     grid-area: join;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    padding: 1.4rem;
 }
 
 .join__text {
     color: $color-grayish-blue;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 0.5px;
     line-height: 1.95;
 }
@@ -64,7 +64,7 @@ a {
 .join__guarantee {
     font-size: 0.95rem;
     color: $color-bright-yellow;
-    margin-bottom: 01.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .subscription {
@@ -116,8 +116,6 @@ a {
     background-color: $color-cyan;
     opacity: 0.8;
     grid-area: why;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 h1 {
@@ -137,9 +135,9 @@ p {
 }
 
 li {    
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: $color-white;
-    line-height: 1.5;
+    line-height: 1.55;
     opacity: 0.7;
 }
 
@@ -148,6 +146,8 @@ li {
     text-align: center;
     color: $color-grayish-blue;
     font-size: 0.8rem;
+    position: relative;
+    margin-bottom: 0.5rem;
 }
 
 @media only screen and (min-width: 43.75rem) {
@@ -173,14 +173,5 @@ li {
     .join__text {
         font-size: 0.9rem;
         line-height: 1.6rem;
-    }
-
-    .subscription {
-        border-bottom-left-radius: 5px;
-    }
-
-    .why {
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 0;
     }
 }
