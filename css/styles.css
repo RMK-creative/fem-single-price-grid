@@ -8,7 +8,6 @@
 html {
   font-family: 'Karla', sans-serif;
   font-size: 16px;
-  /*line-height: 1.6;*/
 }
 
 body {
@@ -32,13 +31,14 @@ a {
 }
 
 .container {
-  max-width: 25rem;
-  padding: 2rem;
-  border-radius: 1rem;
+  max-width: 19.5rem;
+  margin: 3rem 1rem;
+  -webkit-box-shadow: 0.2rem 0.3rem 20px #c3ccd0;
+          box-shadow: 0.2rem 0.3rem 20px #c3ccd0;
 }
 
 .box {
-  padding: 1.8rem 1.4rem;
+  padding: 1.4rem;
 }
 
 .join {
@@ -46,11 +46,31 @@ a {
   padding-top: 2rem;
   padding-bottom: 2rem;
   grid-area: join;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.join__text {
+  color: #98a6bd;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 1.95;
+}
+
+.join__guarantee {
+  font-size: 0.95rem;
+  color: #c0df34;
+  margin-bottom: 01.2rem;
 }
 
 .subscription {
   background-color: #2ab2af;
-  grid-area: subscription;
+  grid-area: sub;
+}
+
+.subscription__price-access {
+  opacity: 0.8;
+  font-size: 1rem;
 }
 
 .subscription__price {
@@ -60,14 +80,15 @@ a {
 .subscription__price-total {
   font-size: 2rem;
   font-weight: 700;
+  opacity: 1;
 }
 
 .subscription__price-freq {
-  font-size: 1.125rem;
+  font-size: 0.95rem;
   opacity: 0.6;
   margin-left: 0.7em;
   position: relative;
-  bottom: 0.3rem;
+  bottom: 0.4rem;
 }
 
 .subscription__btn {
@@ -77,19 +98,26 @@ a {
   text-align: center;
   color: white;
   background-color: #c0df34;
-  padding: 1rem 0;
-  margin-top: 1.5rem;
+  padding: 0.85rem 0;
+  margin-top: 1.85rem;
   border-radius: 5px;
-  -webkit-box-shadow: 0.2rem 0.3rem 10px #208885;
-          box-shadow: 0.2rem 0.3rem 10px #208885;
+  -webkit-box-shadow: 0.2rem 0.3rem 10px #119793;
+          box-shadow: 0.2rem 0.3rem 10px #119793;
+}
+
+.subscription__btn:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .why {
-  background-color: #28c3c0;
+  background-color: #2ab2af;
+  opacity: 0.8;
   grid-area: why;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-/*** TEXT STYLING ***/
 h1 {
   font-size: 1.25rem;
   color: #2ab2af;
@@ -97,22 +125,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.125rem;
+  font-size: 1.145rem;
   color: white;
-  margin-bottom: 1.5rem;
-}
-
-.join__guarantee {
-  font-size: 0.9rem;
-  color: #c0df34;
-  margin-bottom: 0.8rem;
-}
-
-.join__text {
-  color: #98a6bd;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  line-height: 1.6;
+  margin-bottom: 1.2rem;
 }
 
 p {
@@ -122,7 +137,7 @@ p {
 li {
   font-size: 0.875rem;
   color: white;
-  line-height: 1.4;
+  line-height: 1.5;
   opacity: 0.7;
 }
 
@@ -130,5 +145,35 @@ li {
 .attribution a {
   text-align: center;
   color: #98a6bd;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 43.75rem) {
+  .container {
+    max-width: 39rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "join join" "sub why";
+  }
+  .box {
+    padding: 2.2rem;
+  }
+  .join__guarantee {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .join__text {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  .subscription {
+    border-bottom-left-radius: 5px;
+  }
+  .why {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
