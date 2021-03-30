@@ -38,9 +38,32 @@ a {
 .container {
     max-width: 19.5rem;
     margin: 3rem 1rem;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
     overflow: hidden;
-    box-shadow: 0.2rem 0.3rem 20px hsl(198, 12%, 79%);
+    box-shadow: 0.2rem 0.8rem 20px hsl(204, 43%, 77%);
+}
+
+h1 {
+    font-size: 1.25rem;
+    color: $color-cyan;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.145rem;
+    color: $color-white;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    color: $color-white;
+}
+
+li {    
+    font-size: 0.8rem;
+    color: $color-white;
+    line-height: 1.55;
+    opacity: 0.7;
 }
 
 .subscription, 
@@ -116,29 +139,6 @@ a {
     background-color: $color-cyan;
     opacity: 0.8;
     grid-area: why;
-}
-
-h1 {
-    font-size: 1.25rem;
-    color: $color-cyan;
-    margin-bottom: 1.5rem;
-}
-
-h2 {
-    font-size: 1.145rem;
-    color: $color-white;
-    margin-bottom: 1.2rem;
-}
-
-p {
-    color: $color-white;
-}
-
-li {    
-    font-size: 0.8rem;
-    color: $color-white;
-    line-height: 1.55;
-    opacity: 0.7;
 }
 
 .attribution,
